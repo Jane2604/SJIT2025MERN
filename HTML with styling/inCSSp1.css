@@ -1,0 +1,10 @@
+h1{
+    margin-top: 10px;
+}
+.box-model{
+    padding: 15px;
+    background-color: rgb(57, 152, 200);
+    border:solid 5px darkblue;
+    margin: 10px;
+    width: 500px;
+}

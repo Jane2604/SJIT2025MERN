@@ -1,0 +1,17 @@
+#idselector{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1 rem;
+
+}
+.external{
+    background-color: rgb(202, 38, 217);
+    height: 400px;
+    width: 400px;
+}
+ol{
+    margin-top: 100px;
+    list-style-type:circle;
+}
+*{
+    background-color: rgb(139, 137, 144);
+}
