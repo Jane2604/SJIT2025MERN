@@ -1,0 +1,40 @@
+
+.relative-pos1{
+    background-color: rgb(18, 164, 201);
+    position:relative;
+    left: 50px;
+    z-index:3;
+}
+.relative-pos2{
+    background-color: rgb(13, 129, 158);
+    position:relative;
+    z-index:2;
+    
+}
+.relative-pos3{
+    background-color: rgba(15, 117, 143, 0.705);
+    position:relative;
+    z-index:1;
+}
+    
+.div-pos{
+    border: 2px solid rgb(202, 2, 2);
+    background-color: pink;
+    margin: 100px;
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+.abs-pos{
+    position: absolute;
+    left:50px;
+    top:50px;
+}
+.fixed-pos{
+     position: fixed;
+}
+.sticky-pos{
+    position: sticky;
+    top:100px;
+
+}

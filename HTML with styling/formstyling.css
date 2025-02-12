@@ -1,0 +1,9 @@
+input[type]{
+   border: 1px solid pink;
+   border-radius: 30px;
+}
+input[type=number]{
+    border: 1px solid pink;
+    border-radius: 30px;
+ }
+ 
