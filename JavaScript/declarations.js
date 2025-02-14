@@ -14,6 +14,7 @@ array=[1,6,"abc",true]
 console.log(array);
 //ojects
 //1st type of object declaration
+console.log("1st type of object declaration");
 object1={
     "firstname":"St.Joseph's",
     "lastname":"Institute of technology",
@@ -24,6 +25,7 @@ console.log(object1);
 console.log(object1.departments);
 console.log(object1["training"]);
 //2nd type of object declaration
+console.log("2nd type of object declaration");
 object2={}
 object2["firstname"]="Hello"
 object2["lastname"]="SJIT"

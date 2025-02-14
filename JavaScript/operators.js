@@ -12,3 +12,9 @@ console.log(false || 10);
 console.log(true || 15);
 console.log(5 || 10);//First value
 console.log(10 || 5);
+//RSO
+console.log(55>>3);
+console.log(8>>3);
+console.log(1>>1);
+//LSO
+console.log(128<<1);
