@@ -37,3 +37,10 @@ object1={
 Object.entries(object1).forEach((key,element)=>{
     console.log(key,element);
 })
+let a=10
+while(a<12)
+{
+    console.log(a);
+    a++;
+}
+console.log(a);
