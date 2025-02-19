@@ -1,0 +1,15 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    list-style-type: none;
+    background-color: palevioletred;
+    color: white;
+    padding: 10px;
+
+}
