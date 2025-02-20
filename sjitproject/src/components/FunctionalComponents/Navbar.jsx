@@ -1,24 +1,42 @@
-import "../css/navbar.css"
+import "../css/Navbar.css"
 import { Link } from 'react-router-dom';
+import { useState } from "react";
 
-const Navbar=()=>{
-   return(
+const Navbar = () => {
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  return (
     <header>
-    <nav>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/About'>About</Link></li>
-        <li><Link to='/Contact'>Contact</Link></li>
-        <li><Link to='/Login'>Login</Link></li>
-        <li><Link to='/Gallery'>Gallery</Link></li>
-        <div>
-        <span>Hooks</span>
-        <ol>
-        <li><Link to='/use-state'>useState</Link></li>
-        <li><Link to='/use-effect'>useEffect</Link></li>
-        </ol>
-        </div>
-    </nav>
+      <nav>
+        <ul>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/About'>About</Link></li>
+          <li><Link to='/Contact'>Contact</Link></li>
+          <li><Link to='/Login'>Login</Link></li>
+          <li><Link to='/Signup'>SignUp</Link></li>
+          <li><Link to='/Gallery'>Gallery</Link></li>
+          <li className="hooks-container">
+            <span 
+              style={{ color: "white", cursor: "pointer" }} 
+              onClick={() => setDropdownVisible(!dropdownVisible)}//event handling
+            >
+              Hooks 
+            </span>
+
+            {dropdownVisible && (
+              <ol>
+                <li><Link to='/use-state'>useState</Link></li>
+                <li><Link to='/use-effect'>useEffect</Link></li>
+                <li><Link to='/use-effect-api'>useEffectAPI</Link></li>
+                <li><Link to='/use-ref'>useRef</Link></li>
+                <li><Link to='/use-memo'>useMemo</Link></li>
+              </ol>
+            )}
+          </li>
+        </ul>
+      </nav>
     </header>
-   );
+  );
 };
+
 export default Navbar;

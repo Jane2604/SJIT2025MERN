@@ -1,7 +1,7 @@
 function Home(properties){
     var styling={
         textAlign:"center",
-        backgroundColor:"blue",
+        backgroundColor:"lightgray",
         color:"White"
     }
     var a=10

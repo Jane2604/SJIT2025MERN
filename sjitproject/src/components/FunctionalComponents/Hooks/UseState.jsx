@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function About() {
+function UseState() {
   var stateVar = 0;
   var [num, setNum] = useState(stateVar);
   function handleDecrement() {
@@ -22,4 +22,4 @@ function About() {
     </div>
   );
 }
-export default About;
+export default UseState;
