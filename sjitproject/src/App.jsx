@@ -6,7 +6,7 @@ import Gallery from './components/FunctionalComponents/Gallery.jsx';
 import Login from './components/FunctionalComponents/Login.jsx'; 
 import Signup from './components/FunctionalComponents/Signup.jsx'; 
 import Navbar from './components/FunctionalComponents/Navbar.jsx';
-import UseEffect from './components/FunctionalComponents/Hooks/useEffect.jsx';
+import UseEffect from './components/FunctionalComponents/Hooks/UseEffect.jsx';
 import UseState from './components/FunctionalComponents/Hooks/UseState.jsx';
 import UseEffectAPI from './components/FunctionalComponents/Hooks/UseEffectAPI.jsx';
 import UseRef from './components/FunctionalComponents/Hooks/UseRef.jsx';
@@ -19,6 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home properties="Hello" sjit="SJIT" />} />
+        <Route path='/ClassCompEG' element={<ClassCompEG />}/>
         <Route path='/About' element={<About />}/>
         <Route path='/Gallery' element={<Gallery />}/>
         <Route path='/Contact' element={<Contact />}/>
