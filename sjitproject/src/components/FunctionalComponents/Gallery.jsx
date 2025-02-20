@@ -1,5 +1,5 @@
 function Gallery()
 {
-    return <h2>Gallery</h2>;
+    return <h2>Gallery Page</h2>;
 }
 export default Gallery;
