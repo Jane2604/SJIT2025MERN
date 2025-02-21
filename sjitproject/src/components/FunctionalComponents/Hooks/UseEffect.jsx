@@ -9,19 +9,19 @@ const UseEffect=()=>{
     },[])
        return (
         <section>
-            <h1>This is useEffect Example</h1>
+            <h1>This is useEffect Example</h1><br />
             Type your text:{" "} 
             <input 
             type="text"
             value={text} 
-            onChange={(event)=>setText(event.target.value)}/>
-            <h2>The text type is {text1}</h2>
+            onChange={(event)=>setText(event.target.value)}/><br />
+            <h2>The text type is {text}</h2>
             Type your text:{" "} 
             <input 
             type="text"
             value={text1} 
-            onChange={(event)=>setText1(event.target.value)}/>
-            <h2>The text type is {text1}</h2>
+            onChange={(event)=>setText1(event.target.value)}/><br />
+            <h2>The text type is {text1}</h2><br />
         </section>
         
        )

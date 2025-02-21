@@ -27,7 +27,7 @@ function Login() {
         <button type="submit">Submit</button>
 
       </form>
-      <p>Have an account<a href="/SignUp"></a></p>
+      <p>Have an account<a href="/SignUp">Signup</a></p>
       </div>
 
     )

@@ -15,14 +15,14 @@ const UseMemo=()=>{
         color:theme?"white":"black",
     })
    var doublingUpANumber=useMemo(()=>{
-    return slowFunction(number)
+    return number*2
    },[number])*/
     return(
         <div style={styling}>
-            <h1>This is UseMemo example</h1>
-            Number Box:{" "} <input type="number" value={number} onChange={(e)=> setNumber(e.target.value)}/>
-            <h2>The number is {number}</h2>
-            <h2>The number is {slowFunction(number)}</h2>
+            <h1>This is UseMemo example</h1><br />
+            Number Box:{" "} <input type="number" value={number} onChange={(e)=> setNumber(e.target.value)}/><br /><br />
+            <h2>The number is {number}</h2><br />
+            <h2>The number is {slowFunction(number)}</h2><br />
             <button onClick={()=>setTheme(!theme)}>Toggle Theme</button>
         </div>
     )

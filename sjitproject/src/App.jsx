@@ -11,6 +11,9 @@ import UseState from './components/FunctionalComponents/Hooks/UseState.jsx';
 import UseEffectAPI from './components/FunctionalComponents/Hooks/UseEffectAPI.jsx';
 import UseRef from './components/FunctionalComponents/Hooks/UseRef.jsx';
 import UseMemo from './components/FunctionalComponents/Hooks/UseMemo.jsx';
+import UseCallback from './components/FunctionalComponents/Hooks/UseCallback.jsx';
+import UseMemoize from './components/FunctionalComponents/Hooks/UseMemoize.jsx';
+import HoC from './components/FunctionalComponents/HoC/HoC.jsx'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 function App() {
   return (
@@ -25,11 +28,14 @@ function App() {
         <Route path='/Contact' element={<Contact />}/>
         <Route path='/Login' element={<Login />}/>
         <Route path='/Signup' element={<Signup />}/>
+        <Route path='/hoc' element={<HoC />}/>
         <Route path='/use-effect' element={<UseEffect />}/>
         <Route path='/use-state' element={<UseState />}/>
         <Route path='/use-effect-api' element={<UseEffectAPI />}/>
         <Route path='/use-ref' element={<UseRef />}/>
         <Route path='/use-memo' element={<UseMemo />}/>
+        <Route path='/use-callback' element={<UseCallback />}/>
+        <Route path='/use-memoize' element={<UseMemoize />}/>
       </Routes>
       </BrowserRouter>
     </main>
