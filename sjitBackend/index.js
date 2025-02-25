@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose'); 
 const dotenv = require('dotenv'); 
+const bcrypt=require('becrypt')
 dotenv.config(); 
 const Signup=require("./models/signupSchema")
 const app = express();
@@ -18,11 +19,12 @@ app.post("/signup",(req,res)=>{
     try{
         console.log(req.body)
         const{firstName,lastName,email,password,phoneNumber}=req.body
+        const hashedPassword=bcrypt.hash(password,10)
     const newSignup=new Signup({
         firstName:firstName,
         lastName:lastName,
         email:email,
-        password:password,
+        password:hashedPassword,
         phoneNumber:phoneNumber,
     });
     newSignup.save()
