@@ -4,7 +4,8 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
-
+  const [dropdownVisible1, setDropdownVisible1] = useState(false);
+  const [dropdownVisible2, setDropdownVisible2] = useState(false);
   return (
     <header>
       <nav>
@@ -15,6 +16,33 @@ const Navbar = () => {
           <li><Link to='/Login'>Login</Link></li>
           <li><Link to='/Signup'>SignUp</Link></li>
           <li><Link to='/Gallery'>Gallery</Link></li>
+          <li class="memo-container">
+            <span
+              style={{color:"white",cursor:"pointer"}}
+              onClick={()=>setDropdownVisible1(!dropdownVisible1)}>Memoization
+            </span>
+            {dropdownVisible1 && (
+              <ol>
+                <li><Link to='/memo'>Memo</Link></li>
+                <li><Link to='/lazy'>Lazy Loading</Link></li>
+                <li><Link to='/number-file'>Number File</Link></li>
+              </ol>
+            )}
+          </li>
+          <li class="prop-container">
+            <span
+              style={{color:"white",cursor:"pointer"}}
+              onClick={()=>setDropdownVisible2(!dropdownVisible2)}>Prop drilling
+            </span>
+            {dropdownVisible2 && (
+              <ol>
+                <li><Link to='/coe'>CoE</Link></li>
+                <li><Link to='/exam'>Exam</Link></li>
+                <li><Link to='/faculty'>Faculty</Link></li>
+                <li><Link to='/student-results'>Student Results</Link></li>
+              </ol>
+            )}
+          </li>
           <li><Link to='/hoc'>HoC</Link></li>
           <li className="hooks-container">
             <span 
