@@ -1,32 +1,101 @@
+import "../css/Login.css"
+import { useState } from "react";
+import axios from "axios";
 
-import {useState} from 'react'
 function Signup() {
-    const[data,setdata]=useState({
-      name:"",
-      email:"",
-      password:"",
-      confirmPassword:"",
-    })
-    const handleinput=(h)=>{
-      setdata({...data,[h.target.name]:h.target.value})
-    }
-    const handlesubmit=(h)=>{
-      console.log("form submitted", data)
-      alert("form submitted successfully")
-    }
-    return(
-      <div class="container">
-        <h2>Enter the Details</h2>
-        <form onClick={handlesubmit}>
-          <label>Name:</label>
-          <input type="text" name="name" value={data.name} onChange={handleinput} required/><br/><br/>
-          <label>Email:</label>
-          <input type="text"name="email" value={data.email} onChange={handleinput} required/>
-        </form>
-        <p>Already have an account?<a href="/Login">login</a></p>
-      </div>
-    );
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    password: "",
+  });
 
-    
-  }
-  export default Signup;
+  const handleInput = (event) => {
+    setData({ ...data, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:3001/signup", data);
+
+      if (response.data.isSignup) {
+        alert("Signup successful!");
+        window.location.href = "/login";
+      } else {
+        alert(response.data.message || "Signup failed! Please try again.");
+      }
+    } catch (error) {
+      console.error("Error signing up:", error);
+      alert("Network error! Please check your backend server.");
+    }
+  };
+
+  return (
+    <div className="container">
+        <br />
+        <h2>Enter the Details</h2><br />
+      <form onSubmit={handleSubmit}>
+        <label>First Name:</label>
+        <input
+          type="text"
+          name="firstName"
+          value={data.firstName}
+          onChange={handleInput}
+          required
+        />
+        <br /><br />
+        <label>Last Name:</label>
+        <input
+          type="text"
+          name="lastName"
+          value={data.lastName}
+          onChange={handleInput}
+          required
+        />
+        <br /><br />
+        <label>Email:</label>
+        <input
+          type="email"
+          name="email"
+          value={data.email}
+          onChange={handleInput}
+          required
+        />
+        <br /><br />
+        <label>PhoneNumber:</label>
+        <input
+          type="text"
+          name="phoneNumber"
+          value={data.phoneNumber}
+          onChange={handleInput}
+          required
+        />
+        <br /><br />
+        <label>Password:</label>
+        <input
+          type="password"
+          name="password"
+          value={data.password}
+          onChange={handleInput}
+          required
+        />
+        <br />
+        <br />
+
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <p>
+        Already have an account?{" "}
+        <a href="/login" style={{ color: "white", backgroundColor: "gray" }}>
+          Login
+        </a>
+      </p>
+    </div>
+  );
+}
+
+export default Signup;
